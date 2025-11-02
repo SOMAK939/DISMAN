@@ -1,0 +1,5 @@
+# backend/.gitignore
+node_modules/
+.env
+src/config/ai-crisis-management-system-ebb442b040fb.json
+src/config/firebase-service-account.json
