@@ -1,8 +1,19 @@
+// const OpenAI = require('openai');
+const path = require('path');
+require('dotenv').config({ path: path.resolve(__dirname, '../../.env') });
 const OpenAI = require('openai');
+
 const { ANALYSIS_SYSTEM_PROMPT, EMERGENCY_LOG_TOOL } = require('../utils/prompts');
 
 // This client is configured to use OpenRouter by pointing the base URL
 // and using the OpenRouter API key.
+
+console.log("🧩 Debug ENV from analysis.js:", {
+  OPENROUTER_BASE_URL: process.env.OPENROUTER_BASE_URL,
+  MODEL: process.env.OPENROUTER_MODEL,
+  API_KEY_EXISTS: !!process.env.OPENROUTER_API_KEY,
+});
+
 const openRouterClient = new OpenAI({
     baseURL: process.env.OPENROUTER_BASE_URL,
     apiKey: process.env.OPENROUTER_API_KEY,

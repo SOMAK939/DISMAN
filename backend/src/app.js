@@ -24,6 +24,9 @@ const port = 3000;
 
 app.use(express.urlencoded({ extended: false }));
 
+app.get('/', (req, res) => {
+  res.send('AI Crisis Management System Backend is running.');
+});
 // --- ENDPOINT 1: Handles the initial incoming call ---
 app.post('/voice', (req, res) => {
   console.log('--- Incoming call received ---');

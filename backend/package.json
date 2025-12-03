@@ -10,5 +10,13 @@
     "openai": "^5.19.1",
     "twilio": "^5.10.4",
     "ws": "^8.18.3"
+  },
+  "scripts": {
+  "start": "node src/utils/app.js",
+  "dev": "nodemon src/utils/app.js"
+},
+
+  "devDependencies": {
+    "nodemon": "^3.1.10"
   }
 }
